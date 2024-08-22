@@ -19,9 +19,12 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
-    python312
-    python312Packages.pygame
+    (python312.withPackages (python-pkgs: [
+      python-pkgs.pygame
+    ]))
   ];
+
+  #environment.sessionVariables.PYGAME_DETECT_AVX2 = 1;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
