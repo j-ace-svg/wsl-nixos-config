@@ -19,6 +19,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
+    yt-dlp
     (python312.withPackages (python-pkgs: [
       python-pkgs.pygame
     ]))
