@@ -20,6 +20,7 @@
     neovim
     git
     yt-dlp
+    ffmpeg
     (python312.withPackages (python-pkgs: [
       python-pkgs.pygame
     ]))
